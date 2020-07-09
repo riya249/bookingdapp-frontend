@@ -1,7 +1,9 @@
 //Images
 const path = {
-    bookingOffer: require("../../assets/Images/bookingOffer.jpg"),
+    swallLogo: require("../../assets/Images/swallLogo.png"),
+    advertDefault: require("../../assets/Images/advertDefault.jpg"),
     whitelogo: require("../../assets/Images/whitelogo.png"),
+    buzcafePng: require("../../assets/Images/buzcafePng.png"),
     booklogo: require("../../assets/Images/booklogo.png"),
     eventEight: require("../../assets/Images/eventEight.jpg"),
     eventTen: require("../../assets/Images/eventTen.jpg"),
@@ -14,9 +16,6 @@ const path = {
     eventFour: require("../../assets/Images/eventFour.jpg"),
     imgProfile: require("../../assets/Images/imgProfile.jpg"),
     fileUpload: require("../../assets/Images/fileUpload.png"),
-    id: require("../../assets/Images/id.jpeg"),
-    id2: require("../../assets/Images/id2.jpeg"),
-    id3: require("../../assets/Images/id3.jpeg"),
 };
 export default {
     path
