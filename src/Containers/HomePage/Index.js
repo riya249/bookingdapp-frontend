@@ -3,6 +3,7 @@ import './Homepage.css';
 import Images from '../../Containers/Images/Images';
 import { Col, Button, Container, Row } from 'react-bootstrap';
 import Responsive from '../../Responsive/Responsive.css';
+import Carousel from 'react-bootstrap/Carousel';
 import Header from '../../Components/Header/Index';
 import {
     BrowserRouter as Router,
@@ -10,24 +11,6 @@ import {
     Link,
 } from 'react-router-dom'
 
-
-const routes = [
-    {
-        path: '/',
-        exact: true,
-        sidebar: () => <div className="ticket-wrap-para">List your event on BookingDapp by simply, clicking on Create an Event button, and mention all the required information of your event like – the Title, Description, Venue, Date, and Seat Map of your event..</div>,
-    },
-    {
-        path: '/section2',
-        sidebar: () => <div className="ticket-wrap-para">Once your event is successfully listed, add the number of tickets you are adding for sale, once your event tickets are listed, will connect you with your participants directly, in a P2P mode.</div>,
-
-    },
-    {
-        path: '/section3',
-        sidebar: () => <div className="ticket-wrap-para">Now, that all the process is completed, you can receive the value you deserve by selling your tickets directly, to the purchaser in the Peer-to-Peer mode, without paying huge cuts or multi-layer middlemen charges</div>,
-
-    },
-]
 
 class Homepage extends Component {
     constructor(props) {
@@ -48,15 +31,18 @@ class Homepage extends Component {
                                 <div className="profile-box">
                                     <div className="profile-bgd-box">
                                         <div className="profile-bgd">
+                                            <img className="cover-side-img" src={Images.path.wallpapr} />
                                         </div>
-                                        <div className="profile-img"></div>
-                                        <div>
-                                            <h5 className="user-name">Jessica Does</h5>
-                                            <p className="profile-token">Power Token Earned: 0</p>
+                                        <div className="user-box-container">
+                                            <img className="profile-img" src={Images.path.userfr} />
+                                            <div className="user-left">
+                                                <h5 className="user-name">Jessica Does</h5>
+                                                <p className="profile-token">Power Token Earned: 0</p>
+                                                <a className="like-sec-txt">View Profile</a>
+                                                <p className="normal-txt">Wallet Address</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <a>View Profile</a>
-                                    <p className="normal-txt">Wallet Address</p>
                                 </div>
                                 <div>
                                     <div className="swapper-catg1"><a> Circle</a></div>
@@ -70,12 +56,10 @@ class Homepage extends Component {
                                         <textarea id="exampleTextarea" class="form-field__textarea" placeholder="Ledgerise Your thoughts"></textarea>
                                     </div>
                                     <div className="ledger-bottom">
-
                                         <li className="mb-lg1"><i class="fa fa-paperclip"></i>ATTACH</li>
                                         <li className="mb-lg1"><i class='fas fa-tag'></i>TAG</li>
                                         <li className="mb-lg1"> <i class='far fa-star'></i>SWAPPERS WALL ORIGINAL</li>
                                         <li className="mb-lg1"><i class="fa fa-send"></i>POST</li>
-
                                     </div>
                                 </div>
 
@@ -92,16 +76,50 @@ class Homepage extends Component {
                                     <p className="post-txt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it </p>
                                     <img className="post-ledgerimg" src={Images.path.eventNine} />
                                     <div className="post-status-container">
-                                    <i class='far fa-thumbs-up'></i>
-                                    <i class='far fa-thumbs-down'></i>
-                                    <i class='fas fa-comment-alt'></i>
-                                    <i class='fas fa-share'></i>
+                                        <i class='far fa-thumbs-up'></i>
+                                        <i class='far fa-thumbs-down'></i>
+                                        <i class='fas fa-comment-alt'></i>
+                                        <i class='fas fa-share'></i>
                                     </div>
                                 </div>
 
                                 <div className="peers-slide-container">
-                                    
-                                    </div>
+
+                                    <p className="peer-name-txt">Peers you may know</p>
+                                    <Row>
+                                        <Col sm={4} >
+                                            <div className="peer-card">
+                                                <img className="peerimg" src={Images.path.eventFive} />
+                                                <div className="peer-box">
+                                                    <div className="peer-name-txt">Sara Jhonson</div>
+                                                    <p className="small-detatil-txt"> 14 Mutual Peers</p>
+                                                    <button className="add-peer-btn">Add Peers</button>
+                                                </div>
+                                            </div>
+                                        </Col>
+
+                                        <Col sm={4}>
+                                            <div className="peer-card">
+                                                <img className="peerimg" src={Images.path.eventFive} />
+                                                <div className="peer-box">
+                                                    <div className="peer-name-txt">Sara Jhonson</div>
+                                                    <p className="small-detatil-txt"> 14 Mutual Peers</p>
+                                                    <button className="add-peer-btn">Add Peers</button>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                        <Col sm={4}>
+                                            <div className="peer-card">
+                                                <img className="peerimg" src={Images.path.eventFive} />
+                                                <div className="peer-box">
+                                                    <div className="peer-name-txt">Sara Jhonson</div>
+                                                    <p className="small-detatil-txt"> 14 Mutual Peers</p>
+                                                    <button className="add-peer-btn">Add Peers</button>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </div>
                             </Col>
                             <Col sm={3}>
                                 <div className="latest-container">
@@ -149,13 +167,16 @@ class Homepage extends Component {
                                         <img className="buzcafeimg" src={Images.path.buzcafePng} />
                                     </div>
                                     <div className="shop-flex-box">
-                                    <img className="shops-img" src={Images.path.eventOne} />
-                                    <div>
-                                    <div className="news-dark">Shop Name</div>
-                                    <p className="small-detatil-txt">Category</p>
-                                    <p className="small-detatil-txt"><span>Location:</span>xyz hjbsjdbha</p>
-                                    <p className="small-detatil-txt"><span>Contact:</span>78965412</p>
-                                    </div>
+                                        <img className="shops-img" src={Images.path.eventOne} />
+                                        <div>
+                                            <div className="news-dark">Shop Name</div>
+                                            <p className="small-detatil-txt">Category</p>
+                                            <p className="small-detatil-txt"><span>Location:</span>xyz hjbsjdbha</p>
+                                            <p className="small-detatil-txt"><span>Contact:</span>78965412</p>
+                                            <div>
+                                                <a>View Shop</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </Col>

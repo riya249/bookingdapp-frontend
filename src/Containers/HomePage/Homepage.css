@@ -9,8 +9,9 @@ p{
    }
 
    .wrapper-container-home{
-    width: 95%;
+    width: 98%;
     margin: 0 auto;
+    background-color: #f5f5f5;
 }
 .bookindapp-Container{
     width: 75%;
@@ -41,6 +42,44 @@ p{
     background-color: #ffffff;
     border: 1px solid #ffffff;
 }
+
+.profile-img{
+    width:90px;
+    height: 90px;
+    border-radius: 90px;
+    border-color: #ffffff;
+}
+
+.user-box-container{
+    display: flex;
+    position: relative;
+    top: -54px;
+    margin-left: 20px;
+}
+
+.user-name{
+    text-align: center;
+    color: #ffffff;
+}
+
+.user-left{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.profile-token{
+    text-align: right;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.cover-side-img{
+    width: 72%;
+    height: 133px;
+    object-fit: fill;
+}
+
 
 .small-profile-img{
     width: 50px;
@@ -119,8 +158,53 @@ p{
 }
 .shop-flex-box{
     display: flex;
+    margin-top: 10px;
 }
 
 .small-detatil-txt{
     font-size: 12px;
+    color:#767676;
 }
+.peerimg{
+    width: 134px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.carousel-indicators li{
+    box-sizing: inherit;
+}
+
+.peer-name-txt{
+    font-size: 14px;
+    color: #2c2932;
+}
+
+.add-peer-btn{
+    border: 0px;
+    background-color: #af8f2d;
+    color: #ffffff;
+    padding: 0px 15px 0px 15px ;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.peer-card{
+    border: 1px solid #767676;
+    background-color: #ffffff;
+    width: 136px;
+}
+
+.peers-slide-container{
+ margin-top: 20px;
+background-color: #ffffff;
+padding-left: 15px;
+padding-right: 30px;
+padding-bottom: 15px;
+}
+
+.peer-box{
+    margin-left: 10px;
+}
+
+

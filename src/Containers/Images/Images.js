@@ -10,12 +10,14 @@ const path = {
     crtone: require("../../assets/Images/crtone.jpg"),
     crttwo: require("../../assets/Images/crttwo.jpg"),
     eventFive: require("../../assets/Images/eventFive.jpg"),
-    party: require("../../assets/Images/party.jpg"),
+    wallpapr: require("../../assets/Images/wallpapr.jpg"),
     eventOne: require("../../assets/Images/eventOne.jpg"),
     eventNine: require("../../assets/Images/eventNine.jpg"),
     eventFour: require("../../assets/Images/eventFour.jpg"),
     imgProfile: require("../../assets/Images/imgProfile.jpg"),
     fileUpload: require("../../assets/Images/fileUpload.png"),
+    userfr: require("../../assets/Images/userfr.jpg"),
+    usertwo: require("../../assets/Images/usertwo.jpg"),
 };
 export default {
     path
