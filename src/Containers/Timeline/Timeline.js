@@ -28,6 +28,7 @@ class FotoPage extends Component {
                                 
                              </Col>
                              <Col sm={8}>
+                                 
                              </Col>
                              </Row>
                         </Container>

@@ -4,7 +4,8 @@ import Images from '../../Containers/Images/Images';
 import { Col, Button, Container, Row } from 'react-bootstrap';
 import Responsive from '../../Responsive/Responsive.css';
 import Carousel from 'react-bootstrap/Carousel';
-import Header from '../../Components/Header/Index';
+import Modal from 'react-bootstrap/Modal';
+import Header from '../../Components/Header/Header';
 import {
     BrowserRouter as Router,
     Route,
@@ -16,8 +17,14 @@ class Homepage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            showModal: false,
         };
+    }
+
+    handleClose = () => {
+        this.setState({
+            showModal: false,
+        })
     }
 
     render() {
@@ -183,6 +190,34 @@ class Homepage extends Component {
                         </Row>
                     </div>
                 </div>
+                {/* Bootstrap Modal */}
+                <Modal size="lg" show={this.state.showModal} onHide={this.handleClose} className="date-modal-container" >
+                    <Modal.Header closeButton>
+                        <div className="senEs-header-flex">
+                            <div>
+                                <img className="buzcafeimg" src={Images.path.eraicon} />
+                                <h5>Send Era Swap</h5>
+                            </div>
+                            <img className="header-swall" src={Images.path.swal} />
+                        </div>
+                    </Modal.Header>
+                    <Modal.Body >
+                      <h4>HOW MUCH DO YOU WANT TO SEND ? </h4>
+                      <div className="es-amount"></div>
+                        <p>Sending ES 0x9CC14A288BB5cb9Ec0e85b606Cb6585BB7ca6a8E</p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" className='delete-btn' onClick={() => this.setState({ showDeleteModal: false })}>
+                            Send
+                        </Button>
+                        <Button variant="primary" className='delete-btn' onClick={() => this.setState({ showDeleteModal: false })}>
+                            Cancel
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+
+                {/* Bootstrap Modal */}
+
             </div>
 
         );

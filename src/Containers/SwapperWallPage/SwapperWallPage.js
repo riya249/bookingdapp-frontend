@@ -4,7 +4,7 @@ import Images from '../../Containers/Images/Images';
 import { Col, Button, Container, Row } from 'react-bootstrap';
 import Responsive from '../../Responsive/Responsive.css';
 import Carousel from 'react-bootstrap/Carousel';
-import Header from '../../Components/Header/Index';
+import Header from '../../Components/Header/Header';
 import {
     BrowserRouter as Router,
     Route,

@@ -1,6 +1,8 @@
 .wrapper-container-home{
     width: 98%;
     margin: 0 auto;
+    margin-left: 80px;
+    margin-top: 60px;
     background-color: #f5f5f5;
 }
 .page-list{

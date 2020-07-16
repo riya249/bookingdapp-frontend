@@ -17,7 +17,9 @@ const path = {
     imgProfile: require("../../assets/Images/imgProfile.jpg"),
     fileUpload: require("../../assets/Images/fileUpload.png"),
     userfr: require("../../assets/Images/userfr.jpg"),
-    usertwo: require("../../assets/Images/usertwo.jpg"),
+    usertwo:require("../../assets/Images/usertwo.jpg"),
+    swal:require("../../assets/Images/swal.png"),
+    eraicon:require("../../assets/Images/eraicon.png"),
 };
 export default {
     path
