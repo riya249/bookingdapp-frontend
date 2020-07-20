@@ -3,7 +3,10 @@ import './SwapperWallPage.css';
 import Images from '../../Containers/Images/Images';
 import { Col, Button, Container, Row } from 'react-bootstrap';
 import Responsive from '../../Responsive/Responsive.css';
-import Carousel from 'react-bootstrap/Carousel';
+import Timeline from '../../Containers/Timeline/Timeline';
+import Pages from '../../Containers/Pages/Pages';
+import FotoPage from '../../Containers/FotoPage/FotoPage';
+import Club from '../../Containers/Club/Club';
 import Header from '../../Components/Header/Header';
 import {
     BrowserRouter as Router,
@@ -11,7 +14,29 @@ import {
     Link,
 } from 'react-router-dom'
 
-
+const routes = [
+    {
+        path: '/timeline',
+        exact: true,
+        sidebar: () => <div><Timeline/></div>,
+        main: () => <h2></h2>
+    },
+    {
+        path: '/pages',
+        sidebar: () => <div><Pages/></div>,
+        main: () => <h2></h2>
+    },
+    {
+        path: '/Fotos',
+        sidebar: () => <div><FotoPage/></div>,
+        main: () => <h2></h2>
+    },
+    {
+        path: '/Club',
+        sidebar: () => <div><Club/></div>,
+        main: () => <h2></h2>
+    },
+]
 
 class SwapperWallPage extends Component {
     constructor(props) {
@@ -55,164 +80,36 @@ class SwapperWallPage extends Component {
                                 </div>
 
                             </Col>
-                            <Col sm={6}>
-                                <div className="myPage-container">
-                                    <div className="cover-bgd">
-                                        <img className="cover-img" src={Images.path.wallpapr} />
+                            <Router>
+                                <Col sm={6}>
+                                    <div className="myPage-container">
+                                        <div className="cover-bgd">
+                                            <img className="cover-img" src={Images.path.wallpapr} />
 
-                                        <div className="profile-box">
-                                            <img className="profile-pg-img" src={Images.path.crttwo} />
-                                        </div>
-                                        <div className="mypage-option">
-                                            <li className="add-txt space">Timeline</li>
-                                            <li className="add-txt space">Fotos</li>
-                                            <li className="add-txt space">Peers</li>
-                                            <li className="add-txt space">Circle</li>
-                                            <li className="add-txt space">Club</li>
-                                            <li className="add-txt space">Pages</li>
+                                            <div className="profile-box">
+                                                <img className="profile-pg-img" src={Images.path.crttwo} />
+                                            </div>
+                                            <div className="mypage-option">
+                                                <li><Link to="/timeline" className="add-txt space">Timeline</Link></li>
+                                                <li><Link to="/Fotos" className="add-txt space">Fotos</Link></li>
+                                                <li><Link to="/" className="add-txt space">Peers</Link></li>
+                                                <li><Link to="/" className="add-txt space">Circle</Link></li>
+                                                <li><Link to="/Club" className="add-txt space">Club</Link></li>
+                                                <li><Link to="/pages" className="add-txt space">Pages</Link></li>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="search-container">
-                                        <div className="sub-search-flex">
-                                            <h5 className="myPage-txt">My Pages</h5>
-                                            <form action="/action_page.php">
-                                                <input type="search" id="gsearch" className="search-field" name="gsearch" placeholder="Search Pages" />
-                                                <i class="fa fa-search icon-style"></i>
-                                            </form>
-                                        </div>
-                                        <button className="myPage-btn"> &#x271B; Create</button>
-                                    </div>
-                                    <div className="section-one">
-                                        <Row>
-                                            <Col sm={4}>
-                                                <div className="sec-page-box">
-                                                    <img className="cover-sec-img" src={Images.path.eventFour} />
-                                                    <div className="sec-page">
-                                                        <img className="profile-sec-img" src={Images.path.crttwo} />
-                                                    </div>
-                                                    <h4 className="pg-sec-txt">Photographer</h4>
-                                                    <p className="sec-txt">854 Members</p>
-                                                </div>
-                                            </Col>
-
-                                            <Col sm={4}>
-                                                <div className="sec-page-box">
-                                                    <img className="cover-sec-img" src={Images.path.eventFour} />
-                                                    <div className="sec-page">
-                                                        <img className="profile-sec-img" src={Images.path.crttwo} />
-                                                    </div>
-                                                    <h4 className="pg-sec-txt">Photographer</h4>
-                                                    <p className="sec-txt">854 Members</p>
-                                                </div>
-                                            </Col>
-
-                                            <Col sm={4}>
-                                                <div className="sec-page-box">
-                                                    <img className="cover-sec-img" src={Images.path.eventFour} />
-                                                    <div className="sec-page">
-                                                        <img className="profile-sec-img" src={Images.path.crttwo} />
-                                                    </div>
-                                                    <h4 className="pg-sec-txt">Photographer</h4>
-                                                    <p className="sec-txt">854 Members</p>
-
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                </div>
-                                <div className="section-two">
-                                    <h5 className="myPage-txt">Suggested pages for you</h5>
-                                    <Row>
-                                        <Col sm={4}>
-                                            <div className="sec-page-box">
-                                                <img className="cover-sec-img" src={Images.path.eventFour} />
-                                                <div className="sec-page">
-                                                    <img className="profile-sec-img" src={Images.path.crttwo} />
-                                                </div>
-                                                <h4 className="pg-sec-txt">Photographer</h4>
-                                                <p className="sec-txt">854 Members</p>
-                                                <div className="center-sec-like">
-                                                    <a className="like-sec-txt">Like</a>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        <Col sm={4}>
-                                            <div className="sec-page-box">
-                                                <img className="cover-sec-img" src={Images.path.eventFour} />
-                                                <div className="sec-page">
-                                                    <img className="profile-sec-img" src={Images.path.crttwo} />
-                                                </div>
-                                                <h4 className="pg-sec-txt">Photographer</h4>
-                                                <p className="sec-txt">854 Members</p>
-                                                <div className="center-sec-like">
-                                                    <a className="like-sec-txt">Like</a>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        <Col sm={4}>
-                                            <div className="sec-page-box">
-                                                <img className="cover-sec-img" src={Images.path.eventFour} />
-                                                <div className="sec-page">
-                                                    <img className="profile-sec-img" src={Images.path.crttwo} />
-                                                </div>
-                                                <h4 className="pg-sec-txt">Photographer</h4>
-                                                <p className="sec-txt">854 Members</p>
-                                                <div className="center-sec-like">
-                                                    <a className="like-sec-txt">Like</a>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-
-                                    <Row>
-                                        <Col sm={4}>
-                                            <div className="sec-page-box">
-                                                <img className="cover-sec-img" src={Images.path.eventFour} />
-                                                <div className="sec-page">
-                                                    <img className="profile-sec-img" src={Images.path.crttwo} />
-                                                </div>
-                                                <h4 className="pg-sec-txt">Photographer</h4>
-                                                <p className="sec-txt">854 Members</p>
-                                                <div className="center-sec-like">
-                                                    <a className="like-sec-txt">Like</a>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        <Col sm={4}>
-                                            <div className="sec-page-box">
-                                                <img className="cover-sec-img" src={Images.path.eventFour} />
-                                                <div className="sec-page">
-                                                    <img className="profile-sec-img" src={Images.path.crttwo} />
-                                                </div>
-                                                <h4 className="pg-sec-txt">Photographer</h4>
-                                                <p className="sec-txt">854 Members</p>
-                                                <div className="center-sec-like">
-                                                    <a className="like-sec-txt">Like</a>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        <Col sm={4}>
-                                            <div className="sec-page-box">
-                                                <img className="cover-sec-img" src={Images.path.eventFour} />
-                                                <div className="sec-page">
-                                                    <img className="profile-sec-img" src={Images.path.crttwo} />
-                                                </div>
-                                                <h4 className="pg-sec-txt">Photographer</h4>
-                                                <p className="sec-txt">854 Members</p>
-                                                <div className="center-sec-like">
-                                                    <a className="like-sec-txt">Like</a>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Col>
+                                    {routes.map((route) => (
+                                        <Route
+                                            key={route.path}
+                                            path={route.path}
+                                            exact={route.exact}
+                                            component={route.sidebar}
+                                        />
+                                    ))}
+                                </Col>
+                            </Router>
                         </Row>
-
                     </div>
                 </div>
             </div>

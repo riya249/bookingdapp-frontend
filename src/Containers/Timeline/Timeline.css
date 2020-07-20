@@ -1,0 +1,56 @@
+.flex-fotos{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.ft-bld{
+    color: #a7a7a7;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.view-bld{
+    color: #af8f2d;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.side-foto-box{
+    background-color: #ffffff;
+    width: 216px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.foto-sm-style{
+    width: 60px;
+    height: 55px;
+    object-fit: fill;
+    margin-right: 5px;
+}
+
+.fa.fa-paperclip.clip-icon{
+  font-size: 16px;
+  transform: rotate(45deg);
+}
+
+.foto-spacing.row{
+    margin: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.peer-sd-name{
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+
+.peer-spacing.row{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.peers-container{
+    margin-left: 25px;
+}

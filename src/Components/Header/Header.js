@@ -36,7 +36,7 @@ class Header extends Component {
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <i class="fa fa-search search-shft"></i>
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+              <input class="form-control mr-sm-2" type="search"  aria-label="Search" />
             </form>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

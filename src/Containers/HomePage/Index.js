@@ -4,6 +4,7 @@ import Images from '../../Containers/Images/Images';
 import { Col, Button, Container, Row } from 'react-bootstrap';
 import Responsive from '../../Responsive/Responsive.css';
 import Carousel from 'react-bootstrap/Carousel';
+import Sidebar from '../../Components/Sidebar/Sidebar';
 import Modal from 'react-bootstrap/Modal';
 import Header from '../../Components/Header/Header';
 import {
@@ -35,38 +36,18 @@ class Homepage extends Component {
                     <div className='wrapper-container-home'>
                         <Row>
                             <Col sm={4}>
-                                <div className="profile-box">
-                                    <div className="profile-bgd-box">
-                                        <div className="profile-bgd">
-                                            <img className="cover-side-img" src={Images.path.wallpapr} />
-                                        </div>
-                                        <div className="user-box-container">
-                                            <img className="profile-img" src={Images.path.userfr} />
-                                            <div className="user-left">
-                                                <h5 className="user-name">Jessica Does</h5>
-                                                <p className="profile-token">Power Token Earned: 0</p>
-                                                <a className="like-sec-txt">View Profile</a>
-                                                <p className="normal-txt">Wallet Address</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="swapper-catg1"><a> Circle</a></div>
-                                    <div className="swapper-catg1"><a> Club</a></div>
-                                    <div className="swapper-catg1"><a> Pages</a></div>
-                                </div>
+                            <Sidebar/>
                             </Col>
                             <Col sm={4}>
-                                <div class="form-field">
+                                <div class="form-field post-form-bg">
                                     <div class="form-field__control">
                                         <textarea id="exampleTextarea" class="form-field__textarea" placeholder="Ledgerise Your thoughts"></textarea>
                                     </div>
                                     <div className="ledger-bottom">
-                                        <li className="mb-lg1"><i class="fa fa-paperclip"></i>ATTACH</li>
-                                        <li className="mb-lg1"><i class='fas fa-tag'></i>TAG</li>
-                                        <li className="mb-lg1"> <i class='far fa-star'></i>SWAPPERS WALL ORIGINAL</li>
-                                        <li className="mb-lg1"><i class="fa fa-send"></i>POST</li>
+                                    <div className="post-btm-flex"><i class="fa fa-paperclip clip-icon"></i><li className="mb-lg1">ATTACH</li></div>
+                                    <div className="post-btm-flex"><li className="mb-lg1"><i class='fas fa-tag tag-icon'></i>TAG</li></div>
+                                    <div className="post-btm-flex"><li className="mb-lg1"> <i class='far fa-star star-icon'></i>SWAPPERS WALL ORIGINAL</li></div>
+                                    <div className="post-btm-flex"><li className="mb-lg1">POST <i class="fa fa-send send-icon"></i></li></div>
                                     </div>
                                 </div>
 

@@ -36,11 +36,15 @@ p{
 
 .ledger-bottom{
     display: flex;
+    margin-bottom: 15px;
+    border-top: 1px solid #000;
+    margin-top: 10px;
+    justify-content: flex-end;
 }
 
 .mb-lg1{
-    font-size: 16px;
-    margin: 10px;
+    font-size: 11px;
+    margin: 0px 5px 0px 5px;
 }
 
 .ledger-post-container{
@@ -96,6 +100,8 @@ textarea{
     resize: vertical;
     width: 100%;
     height: 103px;
+    padding: 5px;
+    border-color: #ffffff;
 }
 
 .post-txt{
@@ -223,3 +229,40 @@ padding-bottom: 15px;
     justify-content: space-between;
 }
 
+.post-btm-flex{
+    display: flex;
+    margin-top: 5px;
+}
+
+.fa.fa-paperclip.clip-icon{
+    font-size: 16px;
+    transform: rotate(45deg);
+    color: #a7a7a79e;
+  }
+
+  .fas.fa-tag.tag-icon{
+    font-size: 16px;
+    transform: rotate(90deg);
+    margin-right: 8px;
+    color: #a7a7a79e;
+  }
+
+  .fa.fa-send.send-icon{
+    font-size: 16px;
+    transform: rotate(45deg);
+    color: #a7a7a79e;
+  }
+
+  .far.fa-star.star-icon{
+    font-size: 16px;
+    margin-right: 8px;
+    color: #a7a7a79e;
+  }
+
+  .circle-side-txt{
+      margin-left: 15px;
+  }
+
+  .form-field.post-form-bg{
+ background-color: #ffffff;
+  }
